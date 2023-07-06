@@ -293,6 +293,13 @@ html{
 
 /*--------------login------------------- */
 
+.maindiv{
+  width: 100vw;
+  height: 100vh;
+ background-color: white;
+ background-image:url(../public/images/library-wallpaper.jpg)
+}
+
 .login-cont{
   width: 100vw;
   height: 100vh;
@@ -301,21 +308,23 @@ html{
   align-items: center;
 }
 .login-box{
-  background-color: rgb(159, 201, 243);
+  background-color: transparent;
   width: 500px;
   height: auto;
   padding: 25px;
   text-align: center;
   border-radius: 15px;
+  border:  solid 2px grey;
 }
 .login-box h1{
   margin: 10px auto;
+  color: #f57424;
 }
 .login-box hr{
-  border: solid 1px rgb(232, 232, 232);
+  border: solid 1px rgb(171, 169, 169);
 }
 .login-box form{
-  background-color: rgb(37, 82, 124);
+  background-color: transparent;
   border-radius: 12px;
   padding: 15px;
   margin-top: 20px;

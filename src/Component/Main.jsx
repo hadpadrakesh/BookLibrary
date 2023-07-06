@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Card from "./Card";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Main=()=>{
 
@@ -26,7 +27,7 @@ const Main=()=>{
                         <input type="text" placeholder="Enter Your Book Name"
                         value={search} onChange={e=>setSearch(e.target.value)}
                         onKeyPress={searchBook}/>
-                        <button><i class='bx bx-search'></i></button>
+                        <button><Link to={`searchBook/${'AIzaSyDOZHsyCznoCrZNgkE0rDkNIJuAeD8CEw0'+'&maxResults=40'}`}></Link><i class='bx bx-search'></i></button>
                     </div>
                     <img src="./images/bg2.png" alt="" />
                 </div>

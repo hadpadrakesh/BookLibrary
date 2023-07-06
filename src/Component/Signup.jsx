@@ -42,7 +42,7 @@ const Signup = () => {
 
         localStorage.setItem("userdetails", users);
             alert("Account has been created successfully");
-            navigate("/login");
+            navigate("/");
        
     }
 
