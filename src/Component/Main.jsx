@@ -2,11 +2,14 @@ import { useState } from "react";
 import Card from "./Card";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Main=()=>{
 
     const [search , setSearch] = useState("");
     const [bookData, setData] = useState([]);
+    let navigator = useNavigate();
+
     const searchBook=(evt)=>{
         if(evt.key==="Enter")
         {
@@ -15,6 +18,13 @@ const Main=()=>{
             .catch(err=>console.log(err))
         }
     }
+
+    let logout = ()=>{
+        localStorage.removeItem("login");
+        navigator("/")
+    }
+
+
     return(
         <>
             <div className="header">
@@ -28,6 +38,7 @@ const Main=()=>{
                         value={search} onChange={e=>setSearch(e.target.value)}
                         onKeyPress={searchBook}/>
                         <button><Link to={`searchBook/${'AIzaSyDOZHsyCznoCrZNgkE0rDkNIJuAeD8CEw0'+'&maxResults=40'}`}></Link><i class='bx bx-search'></i></button>
+                        <button id="logout" onClick={logout}>Logout</button>
                     </div>
                     <img src="./images/bg2.png" alt="" />
                 </div>
